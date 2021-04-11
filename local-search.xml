@@ -4,6 +4,63 @@
   
   
   <entry>
+    <title>数据结构-字典</title>
+    <link href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/"/>
+    <url>/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>一些操作：1. set(key,value)：添加键值对</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/2.PNG" alt="2"></p><pre><code>2. delete(key)：通过键值移除元素</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/3.PNG" alt="3"></p><pre><code>3. has(key)：检查键</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/1.PNG" alt="1"></p><pre><code>4. get(key)：由键获取值</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/4.PNG" alt="4"></p><pre><code>形式：[键:值]对</code></pre><h2 id="散列表（哈希表）"><a href="#散列表（哈希表）" class="headerlink" title="散列表（哈希表）"></a>散列表（哈希表）</h2><pre><code>散列表：散列表（也叫哈希表），是根据关键码值(Key value)而直接进行访问的数据结构。也就是说，它通过把关键码值（通过散列函数转化为对应的哈希值）映射到表中一个位置来访问记录，以加快查找的速度散列表与其他数据结构的比较：其他数据结构获取值时需要遍历，而散列表可以快速定位元素实现简单的哈希表：</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/7.png" alt="7"></p><pre><code>散列函数（这里举例两种）：1. loseloseHashCode函数</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/5.PNG" alt="5"></p><pre><code>2. djb2HashCode函数</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/6.PNG" alt="6"></p><pre><code>散列表的冲突问题：若两个散列值相同，哪一个添加早，就会被覆盖掉冲突解决方案：1. 分离链接法：在相同的散列值处，生成一个链表存放相同散列值对应的数据（优势：新创建了一个空间用来存放相同散列值的数据）</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/8.PNG" alt="8"></p><pre><code>2. 线性探查法：若遇到相同的散列值处有数据时，向下探查空位置，直到有空位置为止（优势：代码比较简单）</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/9.PNG" alt="9"><br>    3. 也可以利用一些生成的哈希值不那么容易产生冲突的散列函数</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>data-structure</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据结构-集合</title>
+    <link href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/"/>
+    <url>/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol><li><p>集合的特性：无重复性</p></li><li><p>一些操作：<br>has(value)：判断是否有value值<br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/1.PNG" alt="1"></p><p>remove(value)：删除value值<br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/2.PNG" alt="2"></p><p>add(value)：添加value值<br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/3.PNG" alt="3"></p><p>clear()：清除集合<br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/4.PNG" alt="4"></p><p> size()：获取集合的值的个数<br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/5.PNG" alt="5"></p><p>values()：提取集合中的所有值并以数组形式返回<br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/6.PNG" alt="6"></p><p> 形式：[值:值]对</p></li></ol><h2 id="集合间的操作"><a href="#集合间的操作" class="headerlink" title="集合间的操作"></a>集合间的操作</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/7.PNG" alt="7"></p><pre><code>并集：</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/8.PNG" alt="8"></p><pre><code>交集：</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/9.PNG" alt="9"></p><pre><code>差集：</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/10.PNG" alt="10"></p><h2 id="ES6中的集合（Set-WeakSet）"><a href="#ES6中的集合（Set-WeakSet）" class="headerlink" title="ES6中的集合（Set,WeakSet）"></a>ES6中的集合（Set,WeakSet）</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/11.PNG" alt="11"></p><pre><code>Set和WeakSet的区别：</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/12.PNG" alt="12"><br><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/13.PNG" alt="13"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>data-structure</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据结构-链表</title>
+    <link href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/"/>
+    <url>/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介（单向链表）"><a href="#简介（单向链表）" class="headerlink" title="简介（单向链表）"></a>简介（单向链表）</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/1.PNG" alt="1"></p><pre><code>一些操作：1. 添加，寻找元素   insert(pos,ele)：指定位置插入元素   1) 向位置0插入元素   2) 向其他位置插入元素</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/2.PNG" alt="2"></p><pre><code>   append(ele)：尾部插入元素   1) 当链表为空时   2) 当链表不为空时</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/3.PNG" alt="3"></p><pre><code>   indexOf(ele)：获取元素的索引</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/5.PNG" alt="5"></p><pre><code>2. 移除元素   remove(ele)：从链表中移除某一项</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/6.PNG" alt="6"></p><pre><code>   removeAt(pos)：从链表指定位置中移除一项   1) 移除首位(第0位)   2) 移除某指定位</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/4.PNG" alt="4"></p><pre><code>3. isEmpty()：判断链表是否为空</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/7.PNG" alt="7"></p><pre><code>4. size()：获取链表的长度</code></pre><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/8.PNG" alt="8"></p><pre><code>可以把链表类比为火车（不仅有乘客，还与下一节火车相连）</code></pre><h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/9.PNG" alt="9"></p><h2 id="双向循环链表"><a href="#双向循环链表" class="headerlink" title="双向循环链表"></a>双向循环链表</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/10.PNG" alt="10"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>data-structure</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数据结构-队列</title>
     <link href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/"/>
     <url>/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/</url>
@@ -27,7 +84,7 @@
     <link href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/"/>
     <url>/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/</url>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>栈是一种后进先出（LIFO）的数据结构一些概念：栈底，栈顶，入栈，出栈一些操作：push()：入栈                          pop()：出栈         isEmpty()：是否为空         clear()：清空栈         size()：栈元素个数         peek()：查看栈顶         栈的作用：在编程语言的编译器和内存中保存变量，方法调用</code></pre><h2 id="栈和数组—数组实现相关栈的方法"><a href="#栈和数组—数组实现相关栈的方法" class="headerlink" title="栈和数组—数组实现相关栈的方法"></a>栈和数组—数组实现相关栈的方法</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/4.PNG" alt="4"></p><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/2.png" alt="2"></p><h2 id="栈和函数"><a href="#栈和函数" class="headerlink" title="栈和函数"></a>栈和函数</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/1.PNG" alt="1"></p><h2 id="栈和递归"><a href="#栈和递归" class="headerlink" title="栈和递归"></a>栈和递归</h2><pre><code>若不停去递归而不出栈的话，就会导致栈溢出</code></pre><h2 id="栈实例：十进制转二进制"><a href="#栈实例：十进制转二进制" class="headerlink" title="栈实例：十进制转二进制"></a>栈实例：十进制转二进制</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/3.PNG" alt="3"></p><p>​    </p>]]></content>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>栈是一种后进先出（LIFO）的数据结构一些概念：栈底，栈顶，入栈，出栈一些操作：push()：入栈                          pop()：出栈         isEmpty()：是否为空         clear()：清空栈         size()：栈元素个数         peek()：查看栈顶         栈的作用：在编程语言的编译器和内存中保存变量，方法调用可以把栈类比为羽毛球筒装羽毛球</code></pre><h2 id="栈和数组—数组实现相关栈的方法"><a href="#栈和数组—数组实现相关栈的方法" class="headerlink" title="栈和数组—数组实现相关栈的方法"></a>栈和数组—数组实现相关栈的方法</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/4.PNG" alt="4"></p><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/2.png" alt="2"></p><h2 id="栈和函数"><a href="#栈和函数" class="headerlink" title="栈和函数"></a>栈和函数</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/1.PNG" alt="1"></p><h2 id="栈和递归"><a href="#栈和递归" class="headerlink" title="栈和递归"></a>栈和递归</h2><pre><code>若不停去递归而不出栈的话，就会导致栈溢出</code></pre><h2 id="栈实例：十进制转二进制"><a href="#栈实例：十进制转二进制" class="headerlink" title="栈实例：十进制转二进制"></a>栈实例：十进制转二进制</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/3.PNG" alt="3"></p><p>​    </p>]]></content>
     
     
     

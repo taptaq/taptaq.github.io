@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>数据结构-队列 - TAPTAQ WORLD</title>
+  <title>数据结构-字典 - TAPTAQ WORLD</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -167,7 +167,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数据结构-队列">
+            <span class="h2" id="subtitle" title="数据结构-字典">
               
             </span>
 
@@ -177,8 +177,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-10 20:58" pubdate>
-        April 10, 2021 pm
+      <time datetime="2021-04-11 16:41" pubdate>
+        April 11, 2021 pm
       </time>
     </span>
   
@@ -189,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      97 字
+      356 字
     </span>
   
 
@@ -199,7 +199,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -233,23 +233,47 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">数据结构-队列</h1>
+            <h1 style="display: none">数据结构-字典</h1>
             
             <div class="markdown-body">
-              <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>队列是一种先进先出（FIFO）的数据结构
-一些操作：enqueue()：入列
-         dequeue()：出列
-         front()：查看列头
-         isEmpty()：是否为空
-         size()：队列长度
+              <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>一些操作：
+1. set(key,value)：添加键值对
 </code></pre>
-<h2 id="队列和数组"><a href="#队列和数组" class="headerlink" title="队列和数组"></a>队列和数组</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/1.png" srcset="/img/loading.gif" lazyload alt="1"></p>
-<p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/2.PNG" srcset="/img/loading.gif" lazyload alt="2"></p>
-<h2 id="循环队列实现击鼓传花游戏"><a href="#循环队列实现击鼓传花游戏" class="headerlink" title="循环队列实现击鼓传花游戏"></a>循环队列实现击鼓传花游戏</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
-<h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><pre><code>优先队列中每个属性都会携带一个优先级 (可用对象表示)
-优先级高的在队列前面
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/2.PNG" srcset="/img/loading.gif" lazyload alt="2"></p>
+<pre><code>2. delete(key)：通过键值移除元素
 </code></pre>
-<p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/4.png" srcset="/img/loading.gif" lazyload alt="4"></p>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
+<pre><code>3. has(key)：检查键
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
+<pre><code>4. get(key)：由键获取值
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/4.PNG" srcset="/img/loading.gif" lazyload alt="4"></p>
+<pre><code>形式：[键:值]对
+</code></pre>
+<h2 id="散列表（哈希表）"><a href="#散列表（哈希表）" class="headerlink" title="散列表（哈希表）"></a>散列表（哈希表）</h2><pre><code>散列表：散列表（也叫哈希表），是根据关键码值(Key value)而直接进行访问的数据结构。也就是说，它通过把关键码值（通过散列函数转化为对应的哈希值）映射到表中一个位置来访问记录，以加快查找的速度
+
+散列表与其他数据结构的比较：
+其他数据结构获取值时需要遍历，而散列表可以快速定位元素
+
+实现简单的哈希表：
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/7.png" srcset="/img/loading.gif" lazyload alt="7"></p>
+<pre><code>散列函数（这里举例两种）：
+1. loseloseHashCode函数
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/5.PNG" srcset="/img/loading.gif" lazyload alt="5"></p>
+<pre><code>2. djb2HashCode函数
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/6.PNG" srcset="/img/loading.gif" lazyload alt="6"></p>
+<pre><code>散列表的冲突问题：若两个散列值相同，哪一个添加早，就会被覆盖掉
+冲突解决方案：
+1. 分离链接法：在相同的散列值处，生成一个链表存放相同散列值对应的数据（优势：新创建了一个空间用来存放相同散列值的数据）
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/8.PNG" srcset="/img/loading.gif" lazyload alt="8"></p>
+<pre><code>2. 线性探查法：若遇到相同的散列值处有数据时，向下探查空位置，直到有空位置为止（优势：代码比较简单）
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/9.PNG" srcset="/img/loading.gif" lazyload alt="9"><br>    3. 也可以利用一些生成的哈希值不那么容易产生冲突的散列函数</p>
 
             </div>
             <hr>
@@ -277,18 +301,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据结构-链表</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/">
-                        <span class="hidden-mobile">数据结构---栈</span>
+                      <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/">
+                        <span class="hidden-mobile">数据结构-集合</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

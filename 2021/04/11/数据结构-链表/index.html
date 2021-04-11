@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>数据结构-队列 - TAPTAQ WORLD</title>
+  <title>数据结构-链表 - TAPTAQ WORLD</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -167,7 +167,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数据结构-队列">
+            <span class="h2" id="subtitle" title="数据结构-链表">
               
             </span>
 
@@ -177,8 +177,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-10 20:58" pubdate>
-        April 10, 2021 pm
+      <time datetime="2021-04-11 12:18" pubdate>
+        April 11, 2021 pm
       </time>
     </span>
   
@@ -189,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      97 字
+      177 字
     </span>
   
 
@@ -199,7 +199,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -233,23 +233,44 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">数据结构-队列</h1>
+            <h1 style="display: none">数据结构-链表</h1>
             
             <div class="markdown-body">
-              <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>队列是一种先进先出（FIFO）的数据结构
-一些操作：enqueue()：入列
-         dequeue()：出列
-         front()：查看列头
-         isEmpty()：是否为空
-         size()：队列长度
+              <h2 id="简介（单向链表）"><a href="#简介（单向链表）" class="headerlink" title="简介（单向链表）"></a>简介（单向链表）</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
+<pre><code>一些操作：
+1. 添加，寻找元素
+   insert(pos,ele)：指定位置插入元素
+   1) 向位置0插入元素
+   2) 向其他位置插入元素
 </code></pre>
-<h2 id="队列和数组"><a href="#队列和数组" class="headerlink" title="队列和数组"></a>队列和数组</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/1.png" srcset="/img/loading.gif" lazyload alt="1"></p>
-<p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/2.PNG" srcset="/img/loading.gif" lazyload alt="2"></p>
-<h2 id="循环队列实现击鼓传花游戏"><a href="#循环队列实现击鼓传花游戏" class="headerlink" title="循环队列实现击鼓传花游戏"></a>循环队列实现击鼓传花游戏</h2><p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
-<h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><pre><code>优先队列中每个属性都会携带一个优先级 (可用对象表示)
-优先级高的在队列前面
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/2.PNG" srcset="/img/loading.gif" lazyload alt="2"></p>
+<pre><code>   append(ele)：尾部插入元素
+   1) 当链表为空时
+   2) 当链表不为空时
 </code></pre>
-<p><img src="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/4.png" srcset="/img/loading.gif" lazyload alt="4"></p>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
+<pre><code>   indexOf(ele)：获取元素的索引
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/5.PNG" srcset="/img/loading.gif" lazyload alt="5"></p>
+<pre><code>2. 移除元素
+   remove(ele)：从链表中移除某一项
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/6.PNG" srcset="/img/loading.gif" lazyload alt="6"></p>
+<pre><code>   removeAt(pos)：从链表指定位置中移除一项
+   1) 移除首位(第0位)
+   2) 移除某指定位
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/4.PNG" srcset="/img/loading.gif" lazyload alt="4"></p>
+<pre><code>3. isEmpty()：判断链表是否为空
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/7.PNG" srcset="/img/loading.gif" lazyload alt="7"></p>
+<pre><code>4. size()：获取链表的长度
+</code></pre>
+<p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/8.PNG" srcset="/img/loading.gif" lazyload alt="8"></p>
+<pre><code>可以把链表类比为火车（不仅有乘客，还与下一节火车相连）
+</code></pre>
+<h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/9.PNG" srcset="/img/loading.gif" lazyload alt="9"></p>
+<h2 id="双向循环链表"><a href="#双向循环链表" class="headerlink" title="双向循环链表"></a>双向循环链表</h2><p><img src="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/10.PNG" srcset="/img/loading.gif" lazyload alt="10"></p>
 
             </div>
             <hr>
@@ -277,9 +298,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/">
+                      <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据结构-链表</span>
+                        <span class="hidden-mobile">数据结构-集合</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -287,8 +308,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/">
-                        <span class="hidden-mobile">数据结构---栈</span>
+                      <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/">
+                        <span class="hidden-mobile">数据结构-队列</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
