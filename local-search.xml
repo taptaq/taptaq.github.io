@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>数据结构-树</title>
+    <link href="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/"/>
+    <url>/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>树结构：</code></pre><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/1.PNG" alt="1"></p><pre><code>树的每一个节点都包含了：左侧子节点，右侧子节点，自己的值HTML结构就是典型的树结构</code></pre><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/2.PNG" alt="2"></p><pre><code>一些操作：1. 插入节点：insert(value)   1) 树为空   2) 树不为空</code></pre><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/3.png" alt="3"></p><pre><code>2. 移除节点：remove(value) (即重新构建树)   1) 移除没有子节点的节点   2) 移除只有一个子节点的节点（把这一个子节点替代删除的节点）   3) 移除有两个子节点的节点（找到这个删除节点的右子节点的最小值来替代）</code></pre><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/7.png" alt="7"></p><pre><code>3. 遍历节点：traverse(value)</code></pre><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/4.PNG" alt="4"></p><pre><code>4. 查找最小节点：min()   1) 树为空   2) 树不为空</code></pre><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/5.PNG" alt="5"></p><pre><code>5. 查找最大节点：max()   1) 树为空   2) 树不为空</code></pre><p><img src="/2021/04/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/6.PNG" alt="6"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>data structure</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数据结构-字典</title>
     <link href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/"/>
     <url>/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8/</url>
