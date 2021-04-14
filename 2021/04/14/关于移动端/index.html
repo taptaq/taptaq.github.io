@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>面试题-css实现三栏布局 - TAPTAQ WORLD</title>
+  <title>关于移动端 - TAPTAQ WORLD</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -167,7 +167,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="面试题-css实现三栏布局">
+            <span class="h2" id="subtitle" title="关于移动端">
               
             </span>
 
@@ -177,8 +177,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-13 18:59" pubdate>
-        April 13, 2021 pm
+      <time datetime="2021-04-14 14:00" pubdate>
+        April 14, 2021 pm
       </time>
     </span>
   
@@ -189,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      975 字
+      1.4k 字
     </span>
   
 
@@ -199,7 +199,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      16
        分钟
     </span>
   
@@ -233,73 +233,119 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">面试题-css实现三栏布局</h1>
+            <h1 style="display: none">关于移动端</h1>
             
             <div class="markdown-body">
-              <h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><p><strong>假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应</strong></p>
-<p><strong>方案：float布局，absolute布局，表格布局，grid布局，flex布局，双飞翼布局，圣杯布局（共7种）</strong></p>
-<h2 id="float布局"><a href="#float布局" class="headerlink" title="float布局"></a>float布局</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
-<pre><code>做法：左右两侧部分分别左右浮动，中间容器要设置的左右margin为左右两侧分别的宽度
-
-注意：在中间的div区域要放到最前面进行渲染
-
-优点：比较简单，兼容性也比较好。只要清除浮动做的好，是没有什么问题的
-
-缺点：浮动元素是脱离文档流，要做清除浮动，这个处理不好的话，会带来很多问题，比如高度塌陷等
+              <h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><pre><code>总共可分为3个视口：布局视口，视觉视口，理想视口
+布局视口：
+1. 一般移动设备的浏览器都默认设置一个布局视口，用于解决早起的PC端页面在手机上显示的问题
+2. 这个视口的分辨率基本都设置为980px
 </code></pre>
-<h2 id="absolute布局"><a href="#absolute布局" class="headerlink" title="absolute布局"></a>absolute布局</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/2.png" srcset="/img/loading.gif" lazyload alt="2"></p>
-<pre><code>做法：对左中右三个区域部分都设置绝对定位，左边区域设置left为0，右边区域设置right为0，中间部分设置的left和right分别是左右区域的宽度
-
-优点：很快捷，设置很方便，而且也不容易出问题
-
-缺点：绝对定位是脱离文档流的，意味着下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/4.PNG" srcset="/img/loading.gif" lazyload alt="4"></p>
+<pre><code>视觉视口：
+用户所看到的网站区域
 </code></pre>
-<h2 id="table布局"><a href="#table布局" class="headerlink" title="table布局"></a>table布局</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
-<pre><code>做法：对包裹的父容器设置display：table，对左中右区域分别设置display：table-cell
-
-优点：实现简单，代码少
-
-缺点：当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/5.PNG" srcset="/img/loading.gif" lazyload alt="4"></p>
+<pre><code>理想视口：
+使得网站在移动端有最理想的浏览和阅读宽度而设定的，是最理想的视口尺寸
+要手动添加meta视口标签，主要目的：布局视口的宽度应该与理想视口的宽度一致
+meta标签：
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+一些属性值说明：（更多属性说明可到w3c，mdn等官网查询）
 </code></pre>
-<h2 id="grid布局"><a href="#grid布局" class="headerlink" title="grid布局"></a>grid布局</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/4.PNG" srcset="/img/loading.gif" lazyload alt="4"></p>
-<pre><code>做法：对包裹的父容器设置display：grid，并且设置grid-template-columns：左边宽度 auto（中间宽度自动） 右边宽度，grid-template-rows: 各区域高度
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/6.PNG" srcset="/img/loading.gif" lazyload alt="6"></p>
+<h2 id="一些手机设备的物理像素比-dpr"><a href="#一些手机设备的物理像素比-dpr" class="headerlink" title="一些手机设备的物理像素比(dpr)"></a>一些手机设备的物理像素比(dpr)</h2><pre><code>物理像素比 = 物理像素 / 逻辑像素 
+物理像素：就是设备所显示的像素（手机截图在ps中量取出来的大小）
+逻辑像素：页面在css页面中书写的像素
 
-注意：在中间的div区域要放到中间进行渲染
-
-优点：简单快捷(可以随意组合，其一高度发生变化，另外模块也不会进行跟着变化)
-
-缺点：不支持IE10以下
+由于在手机设备中，会对物理像素放大倍数，就会导致图片模糊
+所以就要用到倍图
 </code></pre>
-<h2 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/5.PNG" srcset="/img/loading.gif" lazyload alt="5"></p>
-<pre><code>做法：对包裹的父容器设置display：flex，设置中间的区域为flex：1
-
-注意：在中间的div区域要放到中间进行渲染
-
-优点：简单快捷(在不设置高度情况下，min-height除外，那么其一块高度发生变化，其它块高度也会发生变化)
-
-缺点：不支持IE10以下
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/7.PNG" srcset="/img/loading.gif" lazyload alt="7"></p>
+<h2 id="移动端的css样式初始化文件"><a href="#移动端的css样式初始化文件" class="headerlink" title="移动端的css样式初始化文件"></a>移动端的css样式初始化文件</h2><pre><code>normailze.css（下载地址：https://necolas.github.io/normalize.css/）
 </code></pre>
-<h2 id="圣杯布局（通过左浮动加相对定位实现）"><a href="#圣杯布局（通过左浮动加相对定位实现）" class="headerlink" title="圣杯布局（通过左浮动加相对定位实现）"></a>圣杯布局（通过左浮动加相对定位实现）</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/7.png" srcset="/img/loading.gif" lazyload alt="7"></p>
-<pre><code>做法：对包裹的父容器设置padding（给左右两区域留出位置）。对中间区域设置宽度为100%
-     对左中右区域设置position：relative，左区域的left：-左区域宽度，margin-left：-100%。右区域的right：-右区域宽度，margin-left：-右区域宽度（左右区域占据了父容器的padding部分）
-
-注意：最好给body设置一个最小宽度
-
-优点：结构简单，无多余dom层
-
-缺点：中间部分宽度小于左侧时会发生混乱
+<h2 id="单独制作移动端的页面"><a href="#单独制作移动端的页面" class="headerlink" title="单独制作移动端的页面"></a>单独制作移动端的页面</h2><h3 id="流式布局"><a href="#流式布局" class="headerlink" title="流式布局"></a>流式布局</h3><pre><code>流式布局是百分比布局
+设置盒子宽度的百分比来根据屏幕宽度进行缩放，不受固定像素影响，内容向两侧填充
+要设置盒子的max-width，min-width（保证其缩放在合理范围内）
 </code></pre>
-<h2 id="双飞翼布局（通过左浮动配合margin实现）（是对圣杯布局的改进）"><a href="#双飞翼布局（通过左浮动配合margin实现）（是对圣杯布局的改进）" class="headerlink" title="双飞翼布局（通过左浮动配合margin实现）（是对圣杯布局的改进）"></a>双飞翼布局（通过左浮动配合margin实现）（是对圣杯布局的改进）</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/6.png" srcset="/img/loading.gif" lazyload alt="6"></p>
-<pre><code>做法：对左中右区域都设置左浮动，对于中间区域用一个容器包裹着，并设置宽度为100%。中间包裹的子区域，设置左右margin为左右区域的宽度（给左右两区域留出位置）
-      设置左边区域的margin-left：-100%，设置右边区域的margin-left：-右区域宽度（左右区域所占据的空间是中间区域的margin空间）
-
-注意：对于中间的区域一定要有个容器包裹着
-
-优点：支持各种宽高变化，通用性强
-
-缺点：多了一层包裹中间区域的代码(增加渲染树的计算量)，三栏高度不统一
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/8.PNG" srcset="/img/loading.gif" lazyload alt="8"></p>
+<h3 id="flex布局（推荐）"><a href="#flex布局（推荐）" class="headerlink" title="flex布局（推荐）"></a>flex布局（推荐）</h3><pre><code>flex能为盒状模型提供最大的灵活性，任何一个容器都可以指定为flex布局
+对父容器设置的属性：
 </code></pre>
-<h2 id="延伸问题"><a href="#延伸问题" class="headerlink" title="延伸问题"></a>延伸问题</h2><p><strong>若高度不固定，则可以使用哪种布局</strong><br><strong>方案：flex布局，grid布局，table布局</strong></p>
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/9.PNG" srcset="/img/loading.gif" lazyload alt="9"><br>    对子项设置的属性：<br><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/11.PNG" srcset="/img/loading.gif" lazyload alt="11"></p>
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/10.PNG" srcset="/img/loading.gif" lazyload alt="10"></p>
+<h3 id="适配布局（推荐）"><a href="#适配布局（推荐）" class="headerlink" title="适配布局（推荐）"></a>适配布局（推荐）</h3><pre><code>在移动端中的内容按照不同屏幕大小自动等比例缩放的一种布局计算方式
+能够随着屏幕大小而自适应去变化，元素的高度和宽度等比例缩放
+
+rem单位：
+em单位和rem单位的区别：
+em是相对父元素的字体大小，rem是相对根元素（html元素）的字体大小
+优点：可通过修改html里面的文字大小来改变页面中的元素大小，可以实现整体控制
+
+
+媒体查询（CSS3新语法）：
+使用@media查询，可针对不同的媒体类型定义不同的样式
+               可针对不同的屏幕尺寸设置不同的样式
+               重置浏览器大小时，页面会根据浏览器的宽高度重新渲染页面
+
+语法：
+@media mediatype(媒体类型) and/not/only (media feature 媒体特性)&#123;...&#125; 
+mediatype的取值：
+all(所有设备)，print(打印设备)，screen(电脑屏幕，平板，手机等)
+关键字：
+and：可将多个媒体特性连接到一起
+not 排除某个媒体类型
+only：指定某个特定的媒体类型
+媒体特性：
+1) width：输出设备中页面可见区域的宽度
+2) min-width：输出设备中页面最小可见区域的宽度
+3) max-width：输出设备中页面最大可见区域的宽度
+e.g.
+@media screen and (max-width:500px)&#123;...&#125;    //在屏幕上页面最大的宽度是500px，在页面宽度为500px内设置的样式才会生效（样式只在屏幕宽度小于等于500像素才生效）
+
+@media screen and (min-width:500px) and (max-width:1000px)&#123;...&#125;    //在屏幕上页面宽度为500px到1000px，设置的样式生效
+
+媒体查询一般按照从大到小或者从小到大的顺序来去设置（最好是从小到大设置）
+
+针对不同的媒体引入对应不同的CSS文件（直接在link判断设备的尺寸，然后引入不同的CSS文件）
+&lt;link rel=&quot;stylesheet&quot; media=&quot;mediatype and/only/not (media feature)&quot; href=&quot;xxx&quot;&gt;
+
+
+rem和媒体查询配合使用：
+利用媒体查询和rem能实现页面的元素动态大小变化
+e.g.
+</code></pre>
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
+<pre><code>rem适配方案：
+按照设计稿与设备宽度的比例，动态计算并设置html根标签的font-size大小
+CSS中，设计稿元素的宽，高，相对位置等的取值，按照同等比例换算为rem单位的值
+
+1. rem + 媒体查询 + less
+元素大小的rem取值：
+公式：页面元素的rem值=页面元素的像素值(px) / (屏幕宽度 / 划分的份数)
+（屏幕宽度 / 划分的份数 就是html的font-size大小，其中划分的份数自定义（一般为10,15））
+
+2. flexible.js + rem
+元素大小的rem取值：页面元素的px值 / (屏幕宽度 / 10)
+（划分的份数默认划分10等份，根元素的font-size会自动计算出来）
+
+可利用vscode的px to rem &amp; rpx (cssrem)插件，px自动转换rem
+</code></pre>
+<h2 id="响应式页面兼容移动端"><a href="#响应式页面兼容移动端" class="headerlink" title="响应式页面兼容移动端"></a>响应式页面兼容移动端</h2><h3 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h3><pre><code>根据浏览器宽度，分辨率，横屏，竖屏等情况来自动改变元素展示的一种布局方式
+一个页面能够兼容多个终端
+
+使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的
+
+响应式开发设备屏幕尺寸划分：
+</code></pre>
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/2.PNG" srcset="/img/loading.gif" lazyload alt="2"></p>
+<pre><code>要有一个响应式布局的容器，显示的子元素按照这个容器的大小而显示相应的大小排列
+
+平时的响应式尺寸划分：（设置的宽度比屏幕要小一点是为了中间区域居中，两侧空白，好看一点）
+</code></pre>
+<p><img src="/2021/04/14/%E5%85%B3%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
+<pre><code>可通过使用bootstrap框架设计响应式布局
+</code></pre>
 
             </div>
             <hr>
@@ -312,7 +358,7 @@
                     
                       <a class="hover-with-bg" href="/tags/css/">css</a>
                     
-                      <a class="hover-with-bg" href="/tags/interview/">interview</a>
+                      <a class="hover-with-bg" href="/tags/mobile/">mobile</a>
                     
                   </div>
                 
@@ -329,18 +375,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">面试题-css实现水平垂直居中</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE/">
-                        <span class="hidden-mobile">数据结构-图</span>
+                      <a href="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/">
+                        <span class="hidden-mobile">面试题-css实现水平垂直居中</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
