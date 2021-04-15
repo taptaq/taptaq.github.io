@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>关于css的position</title>
+    <link href="/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E7%9A%84position/"/>
+    <url>/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E7%9A%84position/</url>
+    
+    <content type="html"><![CDATA[<h2 id="position的取值"><a href="#position的取值" class="headerlink" title="position的取值"></a>position的取值</h2><pre><code>常规的4个值：static（默认值，静态定位）relative（相对定位）absolute（绝对定位）fixed（固定定位）CSS3新增的3个值：centerpagesticky</code></pre><h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><pre><code>可以认为静态的，默认元素都是静态的定位，对象遵循常规流此时4个定位偏移属性不会被应用，也就是使用 left，right，bottom，top 将不会生效</code></pre><h2 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h2><pre><code>相对定位，对象遵循常规流参照自身在常规流中的位置通过 top，right， bottom，left 这4个定位偏移属性进行偏移时不会影响常规流中的任何元素</code></pre><h2 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h2><pre><code>绝对定位，对象脱离常规流偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到 body 元素盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠对于离自身最近的定位祖先元素，要满足两个条件：1. 一定是自己的祖先元素，可以是父元素也可以是父元素的父元素，一直找，如果没有则选择 body 为对照对象2. 一定是要求祖先元素必须定位，也就是 position 的属性值为非 static 的都行（常说的套路是：父相子绝）绝对定位元素一定是块盒绝对定位元素一定不是浮动      </code></pre><h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><pre><code>固定定位，与 absolute 一致，对象脱离常规流但是固定在浏览器视口，偏移定位是以视口为参考。当出现滚动条时，对象不会随着滚动固定定位元素一定是块盒固定定位元素一定不是浮动   </code></pre><h2 id="center（css3）"><a href="#center（css3）" class="headerlink" title="center（css3）"></a>center（css3）</h2><pre><code>与 absolute 一致，对象脱离常规流偏移定位是以定位祖先元素的中心点为参考。盒子在其包含容器垂直水平居中</code></pre><h2 id="page（css3）"><a href="#page（css3）" class="headerlink" title="page（css3）"></a>page（css3）</h2><pre><code>与 absolute 一致，元素在分页媒体或者区域块内，元素的包含块始终是初始包含块，否则取决于每个 absolute 模式 </code></pre><h2 id="sticky（css3）"><a href="#sticky（css3）" class="headerlink" title="sticky（css3）"></a>sticky（css3）</h2><pre><code>对象在常态时遵循常规流它就像是 relative 和 fixed 的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如 fixed该属性的表现是现实中你见到的吸附效果</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>css</tag>
+      
+      <tag>interview</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>css选择器优先级</title>
     <link href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/"/>
     <url>/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/</url>
