@@ -184,6 +184,67 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/" target="_blank">
+          <img src="/img/select.jpg" srcset="/img/loading.gif" lazyload alt="css选择器优先级">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/">css选择器优先级</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/">
+          
+          
+            
+          
+          CSS选择器CSS选择器分别有：
+1. 元素选择器(span,div,...)
+2. 类选择器(.xx)
+3. id选择器(#xx)
+4. 伪元素选择器(::xx)
+5. 伪类选择器(:xx)
+6. 通配符选择器(*)
+7. 属性选择器([xx])
+8. 组合选择器(+,~&gt;...)
+
+关于CSS选择器的优先级同类型，同级别的样式，后者优先（覆盖）
+选择器选中的范围越窄的，优先级越高
+!im
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-15 15:23" pubdate>
+              2021-04-15
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/css/">css</a>
+            
+              <a href="/tags/interview/">interview</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" target="_blank">
           <img src="/img/box.jpg" srcset="/img/loading.gif" lazyload alt="CSS盒子模型">
         </a>
@@ -207,10 +268,10 @@
 盒子模型总共有两种：W3C标准盒模型和IE盒模型（怪异盒模型）
 这两个盒子模型的区别在于它们宽高的计算方式不同
 
-W3C标准盒模型标准盒模型计算元素的宽高是只算content的宽高
+常见的块盒：容器元素，h1~h6，p，hr，p，pre，table，ul，ol...
+常见的行盒：span，a，img，video，b，input，label，strong，i...
 
 
-利用css3的box-sizing：content-box可设置标准盒模型（box-sizing的默认值是cont
         </a>
       </p>
 
@@ -729,67 +790,6 @@ ES6中的集合（Set,WeakSe
             <i class="iconfont icon-date"></i>
             <time datetime="2021-04-11 12:18" pubdate>
               2021-04-11
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/data-structure/">data-structure</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" target="_blank">
-          <img src="/img/duilie.png" srcset="/img/loading.gif" lazyload alt="数据结构-队列">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/">数据结构-队列</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/">
-          
-          
-            
-          
-          简介队列是一种先进先出（FIFO）的数据结构
-一些操作：enqueue()：入列
-         dequeue()：出列
-         front()：查看列头
-         isEmpty()：是否为空
-         size()：队列长度
-
-队列和数组
-
-循环队列实现击鼓传花游戏
-优先队列优先队列中每个属性都会携带一个优先级 (可用对象表示)
-优先级高的在队列前面
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-10 20:58" pubdate>
-              2021-04-10
             </time>
           </div>
         
