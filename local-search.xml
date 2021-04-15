@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>关于CSS的BFC</title>
+    <link href="/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/"/>
+    <url>/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Formatting-Context"><a href="#Formatting-Context" class="headerlink" title="Formatting Context"></a>Formatting Context</h2><pre><code>Formatting Context：是页面中的一块渲染区域，并且有一套渲染规则来决定其子元素将如何定位，以及和其他元素的关系和相互作用常见的Formatting Context有：Block Formatting Context（规定了一个区域中常规流块盒的布局）和Inline Formatting Context（规定了一个区域中常规流行盒的布局）</code></pre><h2 id="什么是BFC"><a href="#什么是BFC" class="headerlink" title="什么是BFC"></a>什么是BFC</h2><pre><code>BFC是Block Formatting Context（块级格式化上下文）它是一块独立的渲染区域，规定了该区域中，常规流块盒的布局</code></pre><h2 id="BFC的布局规则"><a href="#BFC的布局规则" class="headerlink" title="BFC的布局规则"></a>BFC的布局规则</h2><pre><code>1. 其常规流块盒在包含块的垂直方向上依次摆放2. 每个常规流块盒垂直方向的距离是由margin决定的，但属于同一个BFC的两个相邻常规流块盒的margin会发生重叠（margin合并）</code></pre><p><img src="/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/1.gif" alt="1"></p><pre><code>3. 常规流块盒在水平方向上，必须撑满包含块4. BFC的区域不会与浮动的盒子区域重叠</code></pre><p><img src="/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/5.gif" alt="5"></p><pre><code>5. BFC就相当于是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之也如此6. 计算BFC的高度时，浮动元素也会参与计算7. 每个盒子（块盒与行盒）的margin box的左边，与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此  （即使存在浮动元素，BFC中其他元素的margin box的左边也会与包含块border box的左边相接触）8. 不同的BFC区域，他进行渲染时互不干扰</code></pre><h2 id="BFC的创建"><a href="#BFC的创建" class="headerlink" title="BFC的创建"></a>BFC的创建</h2><pre><code>1. float的属性值不为none（就相当于是浮动的元素）2. position的属性值不为static或relative（就相当于是绝对定位的元素）3. overflow的属性值不为visible4. display的属性值为inline-block，table-cell，flex，table-caption或inline-flex5. html根元素副作用最小的创建方式：overflow：hidden</code></pre><h2 id="BFC的作用"><a href="#BFC的作用" class="headerlink" title="BFC的作用"></a>BFC的作用</h2><pre><code>1. 利用BFC避免margin的重叠</code></pre><p><img src="/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/2.gif" alt="2"></p><pre><code>2. 自适应两栏布局</code></pre><p><img src="/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/3.gif" alt="3"></p><pre><code>3. 清除浮动</code></pre><p><img src="/2021/04/15/%E5%85%B3%E4%BA%8ECSS%E7%9A%84BFC/4.gif" alt="4"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>css</tag>
+      
+      <tag>interview</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于css隐藏元素（大概8种）</title>
     <link href="/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0/"/>
     <url>/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0/</url>
