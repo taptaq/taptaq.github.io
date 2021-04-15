@@ -238,19 +238,19 @@
             <div class="markdown-body">
               <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><pre><code>盒子模型的示意图：（它包括content，padding，border，margin）
 </code></pre>
-<p><img src="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.PNG" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
 <pre><code>盒子模型总共有两种：W3C标准盒模型和IE盒模型（怪异盒模型）
 这两个盒子模型的区别在于它们宽高的计算方式不同
 </code></pre>
 <h2 id="W3C标准盒模型"><a href="#W3C标准盒模型" class="headerlink" title="W3C标准盒模型"></a>W3C标准盒模型</h2><pre><code>标准盒模型计算元素的宽高是只算content的宽高
 </code></pre>
-<p><img src="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/2.PNG" srcset="/img/loading.gif" lazyload alt="2"></p>
+<p><img src="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/2.png" srcset="/img/loading.gif" lazyload alt="2"></p>
 <pre><code>利用css3的box-sizing：content-box可设置标准盒模型（box-sizing的默认值是content-box）
 </code></pre>
 <h2 id="IE盒模型"><a href="#IE盒模型" class="headerlink" title="IE盒模型"></a>IE盒模型</h2><pre><code>IE盒模型又称怪异盒模型
 怪异盒模型计算元素的宽高是content+padding+border的宽高
 </code></pre>
-<p><img src="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.PNG" srcset="/img/loading.gif" lazyload alt="3"></p>
+<p><img src="/2021/04/15/css%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.png" srcset="/img/loading.gif" lazyload alt="3"></p>
 <pre><code>利用css3的box-sizing：border-box可设置怪异盒模型
 </code></pre>
 <h2 id="JS获取盒模型的宽高"><a href="#JS获取盒模型的宽高" class="headerlink" title="JS获取盒模型的宽高"></a>JS获取盒模型的宽高</h2><pre><code>设置盒模型元素的宽高有三种方式：内联样式，style标签，通过link标签引入
