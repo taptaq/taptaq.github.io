@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>关于css隐藏元素（大概8种）</title>
+    <link href="/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0/"/>
+    <url>/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="css隐藏元素的几种方式"><a href="#css隐藏元素的几种方式" class="headerlink" title="css隐藏元素的几种方式"></a>css隐藏元素的几种方式</h2><pre><code>1. display:none2. visibility:hidden3. opacity:04. width,height,margin,padding,border:0 和 overflow:hidden 配合5. position:absolute6. clip-path7. transform:scale(0) 和 zoom 配合8. position:absolute，zoom 和 transform:scale(0) 配合</code></pre><h2 id="display-none（常用）"><a href="#display-none（常用）" class="headerlink" title="display:none（常用）"></a>display:none（常用）</h2><pre><code>元素会彻底消失，元素本身占有的空间就会被其他元素给占有会导致浏览器的重排和重绘不会被子类继承特点：元素不可见，不占据空间，无法响应点击事件</code></pre><h2 id="visibility-hidden（常用）"><a href="#visibility-hidden（常用）" class="headerlink" title="visibility:hidden（常用）"></a>visibility:hidden（常用）</h2><pre><code>仅仅是隐藏元素，DOM还存在（相当于元素还占有空间）不会导致浏览器的重排，但会导致重绘特点：元素不可见，占据页面空间，无法响应点击事件</code></pre><h2 id="opacity-0"><a href="#opacity-0" class="headerlink" title="opacity:0"></a>opacity:0</h2><pre><code>改变了元素的透明度，相当于隐藏了元素，但它仍会存在在页面中不会导致浏览器的重排，在一般情况下会引发重绘会被子类继承若利用animation动画对opcaity作一个变化（animation会触发GPU加速），这只会触发GPU层面的composite，不会触发重绘它自身是可以触发事件的，但是它被遮挡的子元素则不可以触发事件（而且其子元素不能设置opacity来达到显示的效果）IE8以下的版本：filter:Alpha(opacity=0)特点：改变了元素的透明度显示，元素不可见，占据页面空间，可以响应点击事件</code></pre><h2 id="width-height-margin-padding-border-0与overflow-hidden配合"><a href="#width-height-margin-padding-border-0与overflow-hidden配合" class="headerlink" title="width,height,margin,padding,border:0与overflow:hidden配合"></a>width,height,margin,padding,border:0与overflow:hidden配合</h2><pre><code>把等影响盒模型的属性都设置为0，若其里面还有子元素可设置overflow:hidden来隐藏特点：元素不可见，不占据页面空间，无法响应点击事件</code></pre><h2 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position:absolute"></a>position:absolute</h2><pre><code>利用top，left等属性移出可视区特点：元素不可见，不影响页面的布局</code></pre><h2 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h2><pre><code>clip-path是一种剪裁形式相关用法：https://developer.mozilla.org/zh-CN/docs/Web/CSS/clip-path特点：元素不可见，占据页面空间，无法响应点击事件</code></pre><h2 id="transform-scale-0-和-zoom-配合"><a href="#transform-scale-0-和-zoom-配合" class="headerlink" title="transform:scale(0) 和 zoom 配合"></a>transform:scale(0) 和 zoom 配合</h2><pre><code>通过利用scale属性来缩放元素大小，zoom设置为0.01进行隐藏注：IE6/IE7/IE9不占据空间，IE8/FireFox/Chrome/Opera占据空间。都无法点击 特点：元素不可见，不占据页面空间，无法响应点击事件</code></pre><h2 id="position-absolute-zoom-transform-scale-0-配合"><a href="#position-absolute-zoom-transform-scale-0-配合" class="headerlink" title="position:absolute, zoom, transform:scale(0) 配合"></a>position:absolute, zoom, transform:scale(0) 配合</h2><pre><code>通过利用scale属性来缩放元素大小，zoom设置为0.01，position:absolute 进行隐藏这样设置相对于上面的方法都不占据空间特点：元素不可见，不占据页面空间，无法响应点击事件</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><pre><code>隐藏后会占据页面空间：visibility，opacity会触发响应事件：opacity支持与trasition配合使用有渐变效果的：opacity（visibility由于只有0，1两个值，无法有渐变的效果）支持与trasition配合使用的：opacity，visibility子元素可以复原：visibility被遮挡的子元素可以触发事件：visibility（前提是子元素设置了除hidden外的visibility属性）以上的方法也可以根据情况配合使用</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>css</tag>
+      
+      <tag>interview</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于css的position</title>
     <link href="/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E7%9A%84position/"/>
     <url>/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E7%9A%84position/</url>
@@ -88,7 +109,7 @@
   
   
   <entry>
-    <title>css实现水平垂直居中</title>
+    <title>css实现水平垂直居中（大概8种）</title>
     <link href="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
     <url>/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/</url>
     

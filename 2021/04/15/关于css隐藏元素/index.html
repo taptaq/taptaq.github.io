@@ -18,9 +18,25 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>TAPTAQ WORLD</title>
+  <title>关于css隐藏元素（大概8种） - TAPTAQ WORLD</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -146,14 +162,51 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/yuhangyuan1.jpg') no-repeat center center;
+         style="background: url('/img/yekong.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="WELCOME TO TAPTAQ'S BLOG_WORLD">
+            <span class="h2" id="subtitle" title="关于css隐藏元素（大概8种）">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-15 16:47" pubdate>
+        April 15, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      766 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -170,282 +223,148 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/" target="_blank">
-          <img src="/img/jihe.jpg" srcset="/img/loading.gif" lazyload alt="数据结构-集合">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/">数据结构-集合</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9B%86%E5%90%88/">
-          
-          
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">关于css隐藏元素（大概8种）</h1>
             
-          
-          简介
-集合的特性：无重复性
+            <div class="markdown-body">
+              <h2 id="css隐藏元素的几种方式"><a href="#css隐藏元素的几种方式" class="headerlink" title="css隐藏元素的几种方式"></a>css隐藏元素的几种方式</h2><pre><code>1. display:none
+2. visibility:hidden
+3. opacity:0
+4. width,height,margin,padding,border:0 和 overflow:hidden 配合
+5. position:absolute
+6. clip-path
+7. transform:scale(0) 和 zoom 配合
+8. position:absolute，zoom 和 transform:scale(0) 配合
+</code></pre>
+<h2 id="display-none（常用）"><a href="#display-none（常用）" class="headerlink" title="display:none（常用）"></a>display:none（常用）</h2><pre><code>元素会彻底消失，元素本身占有的空间就会被其他元素给占有
+会导致浏览器的重排和重绘
+不会被子类继承
 
-一些操作：has(value)：判断是否有value值
-remove(value)：删除value值
-add(value)：添加value值
-clear()：清除集合
- size()：获取集合的值的个数
-values()：提取集合中的所有值并以数组形式返回
- 形式：[值:值]对
+特点：元素不可见，不占据空间，无法响应点击事件
+</code></pre>
+<h2 id="visibility-hidden（常用）"><a href="#visibility-hidden（常用）" class="headerlink" title="visibility:hidden（常用）"></a>visibility:hidden（常用）</h2><pre><code>仅仅是隐藏元素，DOM还存在（相当于元素还占有空间）
+不会导致浏览器的重排，但会导致重绘
 
+特点：元素不可见，占据页面空间，无法响应点击事件
+</code></pre>
+<h2 id="opacity-0"><a href="#opacity-0" class="headerlink" title="opacity:0"></a>opacity:0</h2><pre><code>改变了元素的透明度，相当于隐藏了元素，但它仍会存在在页面中
+不会导致浏览器的重排，在一般情况下会引发重绘
+会被子类继承
 
-集合间的操作
-并集：
+若利用animation动画对opcaity作一个变化（animation会触发GPU加速），这只会触发GPU层面的composite，不会触发重绘
 
+它自身是可以触发事件的，但是它被遮挡的子元素则不可以触发事件（而且其子元素不能设置opacity来达到显示的效果）
 
-交集：
+IE8以下的版本：filter:Alpha(opacity=0)
 
+特点：改变了元素的透明度显示，元素不可见，占据页面空间，可以响应点击事件
+</code></pre>
+<h2 id="width-height-margin-padding-border-0与overflow-hidden配合"><a href="#width-height-margin-padding-border-0与overflow-hidden配合" class="headerlink" title="width,height,margin,padding,border:0与overflow:hidden配合"></a>width,height,margin,padding,border:0与overflow:hidden配合</h2><pre><code>把等影响盒模型的属性都设置为0，若其里面还有子元素可设置overflow:hidden来隐藏
 
-差集：
+特点：元素不可见，不占据页面空间，无法响应点击事件
+</code></pre>
+<h2 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position:absolute"></a>position:absolute</h2><pre><code>利用top，left等属性移出可视区
 
+特点：元素不可见，不影响页面的布局
+</code></pre>
+<h2 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h2><pre><code>clip-path是一种剪裁形式
+相关用法：https://developer.mozilla.org/zh-CN/docs/Web/CSS/clip-path
 
-ES6中的集合（Set,WeakSe
-        </a>
-      </p>
+特点：元素不可见，占据页面空间，无法响应点击事件
+</code></pre>
+<h2 id="transform-scale-0-和-zoom-配合"><a href="#transform-scale-0-和-zoom-配合" class="headerlink" title="transform:scale(0) 和 zoom 配合"></a>transform:scale(0) 和 zoom 配合</h2><pre><code>通过利用scale属性来缩放元素大小，zoom设置为0.01进行隐藏
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-11 14:16" pubdate>
-              2021-04-11
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/data-structure/">data-structure</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
+注：IE6/IE7/IE9不占据空间，IE8/FireFox/Chrome/Opera占据空间。都无法点击 
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/" target="_blank">
-          <img src="/img/lianbiao.png" srcset="/img/loading.gif" lazyload alt="数据结构-链表">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/">数据结构-链表</a>
-      </h1>
+特点：元素不可见，不占据页面空间，无法响应点击事件
+</code></pre>
+<h2 id="position-absolute-zoom-transform-scale-0-配合"><a href="#position-absolute-zoom-transform-scale-0-配合" class="headerlink" title="position:absolute, zoom, transform:scale(0) 配合"></a>position:absolute, zoom, transform:scale(0) 配合</h2><pre><code>通过利用scale属性来缩放元素大小，zoom设置为0.01，position:absolute 进行隐藏
+这样设置相对于上面的方法都不占据空间
 
-      <p class="index-excerpt">
-        <a href="/2021/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/">
-          
-          
-            
-          
-          简介（单向链表）
-一些操作：（操作时要先存储head链表头）
-1. 添加，寻找元素
-   insert(pos,ele)：指定位置插入元素
-   1) 向位置0插入元素
-   2) 向其他位置插入元素
+特点：元素不可见，不占据页面空间，无法响应点击事件
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><pre><code>隐藏后会占据页面空间：visibility，opacity
+会触发响应事件：opacity
+支持与trasition配合使用有渐变效果的：opacity（visibility由于只有0，1两个值，无法有渐变的效果）
+支持与trasition配合使用的：opacity，visibility
+子元素可以复原：visibility
+被遮挡的子元素可以触发事件：visibility（前提是子元素设置了除hidden外的visibility属性）
 
+以上的方法也可以根据情况配合使用
+</code></pre>
 
-   append(ele)：尾部插入元素
-   1) 当链表为空时
-   2) 当链表不为空时
-
-
-   indexOf(ele)：获取元素的索引
-
-
-2. 移除元素
-   remove(el
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-11 12:18" pubdate>
-              2021-04-11
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/data-structure/">data-structure</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" target="_blank">
-          <img src="/img/duilie.png" srcset="/img/loading.gif" lazyload alt="数据结构-队列">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/">数据结构-队列</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/">
-          
-          
-            
-          
-          简介队列是一种先进先出（FIFO）的数据结构
-一些操作：enqueue()：入列
-         dequeue()：出列
-         front()：查看列头
-         isEmpty()：是否为空
-         size()：队列长度
-
-队列和数组
-
-循环队列实现击鼓传花游戏
-优先队列优先队列中每个属性都会携带一个优先级 (可用对象表示)
-优先级高的在队列前面
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-10 20:58" pubdate>
-              2021-04-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/data-structure/">data-structure</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/" target="_blank">
-          <img src="/img/zhan1.jpg" srcset="/img/loading.gif" lazyload alt="数据结构---栈">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/">数据结构---栈</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88/">
-          
-          
-            
-          
-          简介栈是一种后进先出（LIFO）的数据结构
-栈是一种操作受限的线性表，只允许在栈的一端进行数据的插入和删除
-
-一些概念：栈底，栈顶，入栈，出栈
-
-一些操作：push()：入栈                 
-         pop()：出栈
-         isEmpty()：是否为空
-         clear()：清空栈
-         size()：栈元素个数
-         p
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-10 19:40" pubdate>
-              2021-04-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/data-structure/">data-structure</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </span>
-  </nav>
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/css/">css</a>
+                    
+                      <a class="hover-with-bg" href="/tags/interview/">interview</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E7%9A%84position/">
+                        <span class="hidden-mobile">关于css的position</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -526,9 +445,15 @@ ES6中的集合（Set,WeakSe
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
