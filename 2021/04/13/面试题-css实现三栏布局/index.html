@@ -189,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      975 字
+      979 字
     </span>
   
 
@@ -281,7 +281,7 @@
 </code></pre>
 <h2 id="圣杯布局（通过左浮动加相对定位实现）"><a href="#圣杯布局（通过左浮动加相对定位实现）" class="headerlink" title="圣杯布局（通过左浮动加相对定位实现）"></a>圣杯布局（通过左浮动加相对定位实现）</h2><p><img src="/2021/04/13/%E9%9D%A2%E8%AF%95%E9%A2%98-css%E5%AE%9E%E7%8E%B0%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/7.png" srcset="/img/loading.gif" lazyload alt="7"></p>
 <pre><code>做法：对包裹的父容器设置padding（给左右两区域留出位置）。对中间区域设置宽度为100%
-     对左中右区域设置position：relative，左区域的left：-左区域宽度，margin-left：-100%。右区域的right：-右区域宽度，margin-left：-右区域宽度（左右区域占据了父容器的padding部分）
+     对左中右区域设置position：relative和左浮动，左区域的left：-左区域宽度，margin-left：-100%。右区域的right：-右区域宽度，margin-left：-右区域宽度（左右区域占据了父容器的padding部分）
 
 注意：最好给body设置一个最小宽度
 
