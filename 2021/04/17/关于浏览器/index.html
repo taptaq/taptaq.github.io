@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>关于浏览器 - TAPTAQ WORLD</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2477309_1ifcv0rp302.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":"https://tongji.baidu.com/web/10000196043/overview/index?siteId=16542242","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 80vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Taptaq Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/yekong.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="关于浏览器">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-17 10:38" pubdate>
+        April 17, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      71
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">关于浏览器</h1>
+            
+            <div class="markdown-body">
+              <h1 id="网页的生成"><a href="#网页的生成" class="headerlink" title="网页的生成"></a>网页的生成</h1><pre><code>可分为5步：
+1. HTML代码转化成DOM
+2. CSS代码转化成CSSDOM
+3. 结合DOM和CSSDOM生成渲染树（包含每个节点的视觉信息）
+4. 生成布局，将所有渲染树的所有节点进行平面合成
+5. 将布局绘制在屏幕上
+
+前三步都很快，第四，五步耗时（这两步结合在一起合称渲染（生成布局+绘制））
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
+<h1 id="关于重绘和重排（回流）"><a href="#关于重绘和重排（回流）" class="headerlink" title="关于重绘和重排（回流）"></a>关于重绘和重排（回流）</h1><pre><code>当网页需要重新渲染时，就会触发重排和重绘
+重排：就是重新生成布局
+重绘：就是重新绘制布局在屏幕
+重绘不一定需要重排，而重排一定导致重绘
+
+重新渲染的情况：
+1. 修改DOM
+2. 修改样式表
+3. 用户事件的触发（如鼠标点击和悬停，页面的滚动和改变大小等）
+</code></pre>
+<h1 id="有关缓存"><a href="#有关缓存" class="headerlink" title="有关缓存"></a>有关缓存</h1><h2 id="DNS缓存"><a href="#DNS缓存" class="headerlink" title="DNS缓存"></a>DNS缓存</h2><pre><code>有DNS的地方，就会有缓存
+
+什么是DNS？什么是DNS解析？
+DNS：域名系统，它是作为域名和IP地址相互映射的一个分布式数据库（使用UDP端口53）
+可以这样理解：当你要拜访一个朋友的家，你就要知道这个朋友家的地址，就是通过这个DNS来获得朋友家的地址
+
+DNS解析：根据域名得到对应的IP地址的过程  （域名结构：主机名.次级域名.顶级域名.根域名）
+过程：
+1. 首先会去搜索浏览器自身的DNS缓存，若存在就直接拿到对应的IP地址
+2. 若浏览器自身的缓存没有，则会去读取操作系统的host文件看是否存在对应的映射关系，若存在，则拿到对应的IP地址
+3. 若host文件中不存在对应的映射关系，则查找本地域名服务器（ISP服务器，自己手动设置的DNS服务器），若存在，则拿到对应的IP地址
+4. 若还是没有，则可以进行以下两种查询
+   1) 通过迭代查询：本地域名服务器向根域名服务器查询，根域名服务器告诉它下一步到哪里去查询，然后它再去查，每次它都是以DNS客户的身份去各个服务器查询
+   2) 通过递归查询：本地域名服务器就以DNS客户的身份，向其它根域名服务器发出请求，让根域名服务器替它去查询，而不是让主机自己进行下一步查询
+
+    i) 从根域名服务器查到顶级域名服务器的A记录和NS记录（IP地址） （A记录为IP地址，NS记录指向该级域名的域名服务器）
+    ii) 从顶级域名服务器查到次级域名服务器的A记录和NS记录（IP地址）
+    iii) 从次级域名服务器查出主机名的IP地址
+</code></pre>
+<h2 id="CDN缓存"><a href="#CDN缓存" class="headerlink" title="CDN缓存"></a>CDN缓存</h2><pre><code>什么是CDN？
+CDN为内容分发网络，就相当于一些代售点（CDN节点能起到分流作用,减轻服务器负载压力）
+
+关于CDN缓存：
+在浏览器本地缓存失效后，浏览器会向CDN边缘节点发起请求，CDN边缘节点也存在着一套缓存机制：
+当浏览器向CDN节点请求数据时，这CDN节点会判断缓存数据是否已经过期了，
+若没过期，则直接将缓存的数据返回给客户端。
+否则CDN节点就会向服务器发出回源请求，从服务器拉取最新数据，重新更新本地缓存，并会将最新的数据返回给客户端
+
+CDN的优点：
+1. 解决了跨运营商和跨地域访问的问题，访问延时大大降低了
+2. 大部分请求在CDN边缘节点完成，会起到分流作用，减轻服务器的负载
+</code></pre>
+<h2 id="关于浏览器的缓存机制"><a href="#关于浏览器的缓存机制" class="headerlink" title="关于浏览器的缓存机制"></a>关于浏览器的缓存机制</h2><pre><code>浏览器缓存：就是浏览器保存通过HTTP获取的所有资源,是浏览器将网络资源存储在本地的一种行为
+</code></pre>
+<p><strong>浏览器缓存的东西都放在哪里了呢？</strong></p>
+<pre><code>缓存的资源的去向：（webkit的资源分为主资源（如：HTML页面或者一些下载项等）和派生资源（如：HTML页面中内嵌的图片，脚本链接，字体等））
+1. 内存中（memory cache），下次访问的时候直接从内存中取
+2. 磁盘中（disk cache），下次访问的时候直接从磁盘中取
+两者的异同：
+同：
+都是只能存储一些派生类资源
+异：
+memory cache退出进程时数据会被清除
+disk cache退出进程时数据不会被清除
+存储资源：
+memory cache一般存储脚本（如js（因为随时可能执行）），字体，图片等
+disk cache一般存储非脚本类（如CSS等（css文件加载一次就可以渲染出来，不会去频繁读取它，所以不适合放在memory cache中））
+
+访问缓存的优先级：
+1. 先在内存中查找，有则直接加载
+2. 内存没有则在磁盘中查找，有则直接加载
+3. 磁盘没有，就进行网络请求
+4. 请求获取到的资源缓存到内存和磁盘中
+（内存 -&gt; 磁盘 -&gt; 网络请求）
+</code></pre>
+<p><strong>缓存的分类</strong></p>
+<pre><code>浏览器的缓存可分为两种：强缓存和协商缓存（根据响应的header内容来决定）
+（优先级：首先判断是否命中强缓存，再判断是否命中协商缓存）
+
+
+强缓存：浏览器在第一次请求的时候，会直接下载资源，然后缓存到本地，到第二次请求时，若资源还没有过期就直接使用缓存
+      （普通刷新会启用弱缓存，忽略强缓存。只有在地址栏或收藏夹输入网址、通过链接引用资源等情况下，浏览器才会启用强缓存）
+       强缓存的header字段信息：Expires，Cache-control，Pragma
+       若Cache-Control，Expires，Pragma同时设置了，优先级：Pragma &gt; Cache-Control &gt; Expires
+       1) Expires：是http1.0的规范。其值为一个绝对时间的GMT格式的时间字符串，表示这个资源的失效时间
+                   第一次请求的时候，告诉客户端该资源会什么时候过期（缺点：必须保证服务器时间和客户端时间严格同步，当服务器与客户端事件偏差较大时，会导致缓存混乱）
+       2) Cache-Control：是http1.1的规范
+          取值：max-age | no-cache | no-store | public | private
+          max-age：这是一个相对时间，表示该资源多少时间后过期，解决了客户端与服务器时间必须同步的问题
+          no-cache：需要进行协商缓存，发送请求到服务器确认是否使用缓存
+          no-store：禁止使用缓存，每一次都要重新请求数据
+          public：可以被所用的用户缓存，包括终端用户和CDN等中间代理服务器
+          private：只能被终端用户缓存，包括终端用户和CDN等中间代理服务器
+       3) Pragma：no-cache（唯一一个属性值）
+
+协商缓存：当浏览器的强缓存失效的时候或者请求头中设置了不走强缓存，浏览器会发送一个请求到服务器，并且在请求头中设置了If-Modified-Since 或者 If-None-Match 的时候，会将这两个属性值到服务端去验证是否命中协商缓存，如果命中了协商缓存，会返回 304 状态，加载浏览器缓存，并且响应头会设置 Last-Modified 或者 ETag 属性
+        （简单来说可以认为是客户端与服务器要通过某种标识来进行通信，从而让服务器判断请求资源是否可以缓存访问）
+         协商缓存的header字段信息：Etag/If-None-Match 和 Last-Modified/If-Modified-Since
+         1) Etag：每一个文件都有，唯一的，相当于文件的hash，可为了解决缓存问题
+            Etag/If-None-Match的值是一串 hash 码，代表的是一个资源的标识符，当服务端的文件变化的时候，它的hash码会随之改变，通过请求头中的 If-None-Match 和当前文件的 hash 值进行比较，如果相等则表示命中协商缓存。
+            ETag又有强弱校验之分，如果 hash 码是以 &quot;W/&quot; 开头的一串字符串，说明此时协商缓存的校验是弱校验的，只有服务器上的文件差异（根据 ETag 计算方式来决定）达到能够触发 hash 值后缀变化的时候，才会真正地请求资源，否则返回 304 并加载浏览器缓存。
+
+         2) Last-Modified：文件的修改时间，精确到秒
+            Last-Modified/If-Modified-Since的值代表的是文件的最后修改时间
+            第一次请求服务端会把资源的最后修改时间放到 Last-Modified 响应头中，
+            再一次发起请求的时候，请求头会带上上一次响应头中的 Last-Modified 的时间，并把它放到 If-Modified-Since 请求头属性中，服务端根据文件最后一次修改时间和 If-Modified-Since 的值进行比较，如果相等，返回 304 ，并加载浏览器缓存。
+
+        Last-Modified与ETag可以一起设置，但服务器会优先验证ETag，当一致的情况下，才会继续比对Last-Modified，最后才决定是否返回304
+
+        有了Last-Modified，为什么还需要Etag？
+        1. 一些文件也许会周期性的更改，但它的内容并不改变（仅仅改变了修改时间），这个时候我们并不希望客户端认为这个文件被修改了而去重新请求，所以就利用到了Etag
+        2. 某些文件修改非常频繁，比如1s修改了n次（即修改的时间粒度是在秒级以下的），而if-Modified-Sience能检查到的时间粒度是秒级的，所以对于这种修改是无法判断的
+        3. 某些服务器不能精确得到文件的最后修改时间，所以只靠Last-Modified是不行的
+
+
+总的来说：
+当浏览器再次访问一个已经访问过的资源时，它会有以下做法：
+1. 先看是否命中强缓存，若命中，就直接使用缓存
+2. 若没有命中强缓存，就发送请求到服务器检查是否命中协商缓存
+3. 若命中协商缓存，服务器就会返回304告诉浏览器使用本地缓存
+4. 若没有命中协商缓存，服务器就会发送200，请求到最新的资源
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/2.png" srcset="/img/loading.gif" lazyload alt="2"><br><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/3.jpg" srcset="/img/loading.gif" lazyload alt="3"></p>
+<pre><code>浏览器缓存的优点：
+1. 减少了冗余的数据传输
+2. 减少了服务器的负担，大大提升了网站的性能
+3. 加快了客户端加载网页的速度
+
+关于浏览器的刷新问题：
+1. 当你点击刷新按钮的时候，浏览器会在请求头里加一个&quot;Cache-Control: max-age=0&quot;。因为 max-age 是&quot;生存时间&quot;，而本地缓存里的数据至少保存了几秒钟，所以浏览器就不会使用缓存，而是向服务器发请求。服务器看到max-age=0，也就会用一个最新生成的报文回应浏览器
+2. 而Ctrl+F5的&quot;强制刷新&quot;其实是发了一个&quot;Cache-Control: no-cache&quot;，含义和&quot;max-age=0&quot;基本一样，就看后台的服务器怎么理解，通常两者的效果是相同的
+</code></pre>
+<h2 id="事件循环机制（Event-Loop）"><a href="#事件循环机制（Event-Loop）" class="headerlink" title="事件循环机制（Event Loop）"></a>事件循环机制（Event Loop）</h2><pre><code>简单来说就是主线程的执行栈都执行完毕后，再去任务队列里看看有哪些事件，任务可以执行了，就把他们放到主线程上执行。然后主线程会重复去操作这一个过程。
+上面这一个循环的过程，就是所谓的事件循环机制了（再简单来说就是主线程去读取任务队列的事件，而这个读取的过程是循环的）
+
+而什么是执行栈？什么是任务队列？
+
+对于执行栈，又联系到了一个名词：同步任务
+而这个同步任务呢，就是在主线程排队等待执行的任务，前一个任务执行完，再执行后一个任务
+所有的同步任务都会在主线程上执行，这就形成了一个执行栈
+
+对于任务队列，又会联系到一个名词：异步任务（异步任务必须指定回调函数）
+任务队列是用来专门存放异步任务的
+这个异步任务呢，就是不进入执行栈，而进入任务队列的任务，只有任务队列&quot;通知&quot;主线程某个异步任务可以执行了，则这个异步任务就会被安排进入到主线程中，即进入到执行栈
+1) 任务队列是怎么通知主线程可以执行对应的异步任务的呢？
+   任务队列会添加一个对应的事件，表示相关的异步任务可以进入执行栈中了。主线程读取&quot;任务队列&quot;，就是读取里面有哪些事件
+2) 任务队列中的事件有哪些呢？
+   除了IO设备的事件以外，还包括一些用户产生的事件（比如鼠标点击、页面滚动等等）。只要指定过回调函数(会被主线程挂起来)，这些事件发生时就会进入&quot;任务队列&quot;，等待主线程读取
+3) 什么时候会去读取这个任务队列呢？
+   当主线程空了，执行完毕后就会去读取任务队列中的异步任务
+4) 任务队列还可以存放定时事件：定时器setInterval和延时器setTimeout
+   对于这两个定时事件的最小时间间隔，有如下的规定：
+   setTimeout的最短时间间隔是4毫秒
+   setInterval的最短间隔时间是10毫秒
+  （当最短时间间隔小于规定的数值，则会自动增加到这个最小的数值）
+
+在异步任务中，我们又分为微任务和宏任务
+微任务和宏任务又分别存放在微任务队列（只有一个）和宏任务队列（可以有多个）中
+微任务包括：
+1) promise（then回调函数的执行需要等promise执行结果决定。promise里面的语句是同步任务，而then是微任务）
+2) MutaionObserve（构造函数）（注：new Promise()构造函数里面属于同步代码，而非微任务）
+3) Proxy对象
+4) process.nextTick(Node.js)
+宏任务包括：
+1) script中的代码
+2) setTimeout/setInterval
+3) UI rendering
+4) postMessage：https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage
+5) MessageChannel：https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel
+6) setImmediate：https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setImmediate（是用来把一些需要长时间运行的操作放在一个回调函数里,在浏览器完成后面的其他语句后,就立刻执行这个回调函数）
+7) I/O(Node.js)
+</code></pre>
+<p>   （主线上的同步任务都执行完了，就先执行微任务再执行宏任务（宏任务中的setTimeout和setInterval要按照时间间隔从小到大开始执行））<br>   （一般来说，宏任务后面都会跟着微任务，宏任务执行完后会查看是否有微任务队列，如果有先执行微任务队列中的所有任务，如果没有就查看是否有宏任务队列）<br>   （宏任务会触发新一轮的事件循环，即可能会在下一轮新的事件循环中被执行）<br>   （微任务会放在当前事件循环的末尾）<br>   （执行顺序：先同步加一条异步的微任务，再异步，加上宏任务和微任务）</p>
+<pre><code>Node.js中的Event Loop：
+在Node.js中，有两个与&quot;任务队列&quot;有关的方法：process.nextTick和setImmediate
+process.nextTick方法在当前&quot;执行栈&quot;的尾部 到 下一次Event Loop（主线程读取&quot;任务队列&quot;）之前去触发回调函数
+setImmediate方法则是在当前&quot;任务队列&quot;的尾部添加事件，也就是说，它指定的任务总是在下一次Event Loop时执行，这与setTimeout(fn, 0)很像（当发生递归调用的时候，setImmediate指定的回调函数，总是排在setTimeout前面）
+
+
+事件循环的一些关键步骤：
+1. 在此次事件循环中选择最先进入队列的任务( oldest task )，如果有则执行(一次)
+2. 检查是否存在 Microtasks ，如果存在则不停地执行，直至清空Microtask Queue
+3. 更新 render
+4. 主线程重复执行上述步骤
+</code></pre>
+<h2 id="关于localStorage-和-sessionStorage"><a href="#关于localStorage-和-sessionStorage" class="headerlink" title="关于localStorage 和 sessionStorage"></a>关于localStorage 和 sessionStorage</h2><pre><code>共同点：
+1. 都是在客户端存储的
+2. 都只能存储字符串
+3. 存储数据的大小大概都是5M（看浏览器）
+4. 不同的浏览器是无法共享sessionStorage或localStorage的数据
+5. 建立本地对象和操作数据的方法都一样
+
+不同点：
+1. localStorage存储的数据时永久的
+   sessionStorage存储的数据时暂时性的，关闭浏览器数据就会消失了。不过另外开一个页面的话数据还是在的
+2. 相同浏览器不同的页面（相同域名和相同端口）是可以共享相同localStorage中的数据
+   不同页面或标签页面间是无法共享sessionStorage中的数据（注：当标签页中中包含有同源页面的iframe标签，则是可以共享sessionStorage的数据）
+</code></pre>
+<h2 id="关于cookie-和-session"><a href="#关于cookie-和-session" class="headerlink" title="关于cookie 和 session"></a>关于cookie 和 session</h2><pre><code>共同点：
+1. 都是基于键值对的字符串
+2. 都是后端服务器生成的
+
+不同点：
+1. cookie的数据保存在客户端浏览器中，session的数据保存在服务器端（所以session比cookie安全）
+2. cookie可以是持久性或会话性的
+（若不设置过期时间，则关闭浏览器后数据就会消失，会话性的cookie一般保存在内存中（不同浏览器有不同的处理）。若设置了过期时间，则会在过期时间过后数据才会失效，持久性的cookie一般保存在硬盘中（不同的浏览器进程间cookie是可以共享的））
+   session中的数据是服务器使用一种类似散列表的结构来保存的，也是可以设置超时时间，不过是由服务器来维护的，不同于cookie的失效日期（session一般基于在内存中的cookie）
+3. 会话性的cookie和session对象的生命周期不一样：关闭浏览器后会话性的cookie已经消失了，session对象还保存在服务器端中，也不会使保存到硬盘上的持久化cookie消失
+4. cookie保存数据的大小是4k左右（很多浏览器限制一个站点最多只能保存20个cookie，而一个浏览器能创建的Cookie数量最多为 300 个），session保存数据的大小是和服务器内存大小有关
+
+联系：
+1. session中的session_id可以保存在cookie中的，而session_data是保存在服务器
+   session_id另外的一些保存方法：
+   1) URL重写：可以利用URL重写来把session_id附加到要请求的URL路径后面（两种附加方式：1. 作为URL路径的附加信息。2. 作为查询字符串附加在URL路径的后面）（使得交互过程中始终保持状态）
+   2) 表单隐藏字段：服务器会自动修改表单并添加一个隐藏字段，在表单提交时能把session_id传递回服务器
+   （不过常用的还是用cookie来保存session_id）
+</code></pre>
+<h2 id="事件的捕获，冒泡，委托"><a href="#事件的捕获，冒泡，委托" class="headerlink" title="事件的捕获，冒泡，委托"></a>事件的捕获，冒泡，委托</h2><pre><code>1. 事件捕获：起初Netscape制定了JavaScript的一套事件驱动机制（即事件捕获）
+            从最顶级的父元素一级一级往下找到子元素触发同名事件，直到触发事件的元素为止（从外向内捕获事件对象）
+            因为事件捕获，只能通过addEventListener并且参数写true才是事件捕获
+            其他情况都是冒泡（不是通过addEventListener添加、addEventListener参数为false）
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/5.1.PNG" srcset="/img/loading.gif" lazyload alt="5.1"><br><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/5.PNG" srcset="/img/loading.gif" lazyload alt="5">  </p>
+<pre><code>    阻止事件捕获：（IE8及之前没有捕获）
+    事件对象.stopPropagation() ：除了可以阻止冒泡还可以阻止捕获     
+    事件对象.stopImmediatePropagation()：此方法还会阻止元素的其他事件发生   
+
+
+2. 事件冒泡：随即IE也推出了自己的一套事件驱动机制（即事件冒泡）
+            如果一个元素的事件被触发,那么它所有的父级元素的同名事件都会被触发（从内向外冒泡事件对象）
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/4.1.PNG" srcset="/img/loading.gif" lazyload alt="4.1"><br><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/4.PNG" srcset="/img/loading.gif" lazyload alt="4"></p>
+<pre><code>    阻止事件冒泡：（让同名事件不要在父元素中冒泡（触发），即只触发当前点击元素的事件）
+    事件对象.stopPropagation()      （IE8及之前不支持）
+    事件对象.cancelBubble = true    （IE8之前支持）
+    return false
+    （如果想要阻止事件冒泡，一定要在触发事件的函数中接收事件对象）
+
+（最后W3C规范了两种事件机制，分为捕获阶段、目标阶段、冒泡阶段）
+
+
+3. 事件委托：利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件
+  （当有多个元素要注册事件时，就可以委托到他们的父元素，利用event属性来帮他们注册对应的事件就好了。这个父元素相当于是快递的委托代收点）
+
+   事件委托的好处：
+   1. 优化性能：当给多个元素注册点击事件的时候，只需要委托它的父元素，这样js与dom元素的交互就变为一次，减少了浏览器重绘与重排的次数
+   2. 减少了内存：给多个元素注册点击事件，每一个元素都会有一个事件函数保存在内存里，多个相同的事件函数与一个事件函数的内存相比，内存节省太多
+                 同时如果多个元素注册点击事件会造成内存溢出
+   3. 可以使后来新添加的动态元素绑定事件
+
+   事件委托的原理：
+   比如给li点击事件，事件先开始捕获阶段，从body-&gt;ul-&gt;li
+   而li是目标元素，此时处于目标阶段，浏览器就会查看是否有点击事件
+   若发现没有，那么进入冒泡阶段，又从li的父元素ul中发现父元素ul身上有点击事件,那么便触发ul的点击事件
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/6.1.PNG" srcset="/img/loading.gif" lazyload alt="6.1"><br><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/6.PNG" srcset="/img/loading.gif" lazyload alt="6">  </p>
+<h2 id="输入URL到页面显示的过程到底是发生了什么？"><a href="#输入URL到页面显示的过程到底是发生了什么？" class="headerlink" title="输入URL到页面显示的过程到底是发生了什么？"></a>输入URL到页面显示的过程到底是发生了什么？</h2><pre><code>大概按照以下几个步骤进行：
+1. DNS解析
+2. TCP连接
+3. 发送HTTP请求
+4. 服务器处理请求并返回HTTP报文
+5. 浏览器解析渲染页面
+6. 连接结束
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/%E8%BE%93%E5%85%A5URL%E5%88%B0%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E7%9A%84%E8%BF%87%E7%A8%8B.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="window-onload-和-DOMContentLoaded-的区别"><a href="#window-onload-和-DOMContentLoaded-的区别" class="headerlink" title="window.onload 和 DOMContentLoaded 的区别"></a>window.onload 和 DOMContentLoaded 的区别</h2><pre><code>onload事件触发：页面上所有的DOM，样式表，脚本，图片都已经加载完成了
+
+DOMContentLoaded事件触发：仅当DOM加载完成，不包括样式表，图片(如果有async加载的脚本就不一定完成)  （IE9以上才兼容）
+DOMContentLoaded方法的兼容写法：
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/9.PNG" srcset="/img/loading.gif" lazyload alt="9"></p>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/8.PNG" srcset="/img/loading.gif" lazyload alt="8"><br><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/8.1.PNG" srcset="/img/loading.gif" lazyload alt="8.1"><br><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/8.2.PNG" srcset="/img/loading.gif" lazyload alt="8.2"> </p>
+<pre><code>区分这两个事件可以避免一种情况：绑定的函数放在这两个事件的回调中，保证能在页面的某些元素加载完毕之后再绑定事件的函数（要不然如果某个元素还没有加载到页面上，但是绑定事件已经执行完了，是没有效果的）
+
+触发顺序：先触发DOMContentLoaded事件，再触发onload事件
+</code></pre>
+<h2 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h2><pre><code>在JavaScript中的内存管理是自动执行的，而且是不可见的。我们创建的基本类型，对象，函数等所有这些都需要内存
+当不再需要某样东西时会发生什么呢? JavaScript 引擎是如何发现并清理它?
+
+垃圾回收机制实则是解决内存泄漏的问题，垃圾回收机制会定期（周期性）找出那些不再用到的内存（变量），然后释放其内存
+（何为内存泄漏？ 对于那些没有用到的内存，并且没有及时释放，就会造成内存泄漏）
+
+各大浏览器通常采用的垃圾回收机制有两种方法：标记清除（常用），引用计数，标记压缩法... (几种垃圾回收的算法https://www.jianshu.com/p/a8a04fd00c3c)
+1. 标记清除：
+   垃圾回收机制在运行时，
+   会先给存储在内存中的所有变量加上对应的标记（可以是任何标记方式），
+   然后它就会去调出在环境中的变量及被环境中的变量引用的变量标记（闭包），
+   调出完毕后，剩下带有标记的变量就会被视为准备删除或不再使用的变量（因为环境中的变量已经无法访问这些变量了）
+   最后垃圾回收机制到下一个周期运行的时候，就会把这些变量的内存释放掉，并回收它们所占用的空间
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/10.1.PNG" srcset="/img/loading.gif" lazyload alt="10.1"></p>
+<pre><code>   优点：
+   1) 实现简单，容易和其他算法组合
+   缺点：
+   1) 碎片化，会导致无数小分块散落在堆的各处
+   2) 分配速度不理想，每次分配都需要遍历空闲列表找到足够大的分块
+   3) 与写时复制技术不兼容，因为每次都会在活动对象上打上标记
+
+2. 引用计数
+   语言引擎有一张&quot;引用表&quot;，保存了内存里面所有资源（通常是各种值）的引用次数。如果一个值的引用次数是0，就表示这个值不再用到了，因此可以将这块内存释放。
+</code></pre>
+<p><img src="/2021/04/17/%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8/10.PNG" srcset="/img/loading.gif" lazyload alt="10"></p>
+<pre><code>    优点：
+    1. 可即刻回收垃圾
+    2. 最大暂停时间短
+    3. 没有必要沿指针查找，不要和标记-清除算法一样沿着根集合开始查找
+    缺点：
+    1. 计数器的增减处理繁重
+    2. 计数器需要占用很多位
+    3. 实现繁琐复杂， 每个赋值操作都得替换成引用更新操作
+    4. 循环引用无法回收
+
+......
+
+
+内存泄漏的识别方法：（https://blog.csdn.net/qq_17550381/article/details/81126809）
+1. 浏览器查看
+2. 命令行（Node的process.memoryUsage方法）
+3. WeakMap（ES6）
+</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/interview/">interview</a>
+                    
+                      <a class="hover-with-bg" href="/tags/browser/">browser</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/16/%E5%85%B3%E4%BA%8Ehtml%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/">
+                        <span class="hidden-mobile">关于html的一些东西</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

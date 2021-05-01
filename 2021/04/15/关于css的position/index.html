@@ -189,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      590 字
+      675 字
     </span>
   
 
@@ -199,7 +199,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      7
        分钟
     </span>
   
@@ -261,8 +261,13 @@ sticky
 2. 一定是要求祖先元素必须定位，也就是 position 的属性值为非 static 的都行
 （常说的套路是：父相子绝）
 
-绝对定位元素一定是块盒
+top：没有定位的父辈元素时，参考点是页面左上角。反之参考点则是父父辈元素的左上角
+bottom：没有定位的父辈元素时，参考点是浏览器首屏的左下角。反之参考点则是父辈元素的左下角。
+</code></pre>
+<p><img src="/2021/04/15/%E5%85%B3%E4%BA%8Ecss%E7%9A%84position/1.PNG" srcset="/img/loading.gif" lazyload alt="1"></p>
+<pre><code>绝对定位元素一定是块盒
 绝对定位元素一定不是浮动      
+绝对定位的儿子无视padding
 </code></pre>
 <h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><pre><code>固定定位，与 absolute 一致，对象脱离常规流
 但是固定在浏览器视口，偏移定位是以视口为参考。当出现滚动条时，对象不会随着滚动
@@ -319,8 +324,8 @@ sticky
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/">
-                        <span class="hidden-mobile">css选择器优先级</span>
+                      <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E7%BB%A7%E6%89%BF/">
+                        <span class="hidden-mobile">css选择器优先级和样式继承</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

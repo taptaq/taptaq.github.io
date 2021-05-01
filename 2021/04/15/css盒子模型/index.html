@@ -189,7 +189,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      432 字
+      456 字
     </span>
   
 
@@ -267,7 +267,10 @@ dom.currentStyle.width/height
 3. 获取元素渲染后即时的宽高(上面的三种方式都能获取到)，值准确（兼容性更好）
 getComputedStyle(dom).width/height
 
-4. 获取元素渲染后即时的宽高(上面的三种方式都能获取到)，值准确（兼容性更好），除此之外还能获取到元素的绝对位置（top，bottom，left，right）
+4. 获取到元素的宽高(包括content+padding+border)，left和top值（只读）
+dom.offsetwidth/offsetheight/offsetleft/offsettop
+
+5. 获取元素渲染后即时的宽高(上面的三种方式都能获取到)，值准确（兼容性更好），除此之外还能获取到元素的绝对位置（top，bottom，left，right）
 dom.getBoundingClientRect().width/height/top/left/bottom/right
 注意IE的一些兼容：在IE7及IE7以下left和top会多出两个像素，IE9以上支持width/height属性
 获取到的绝对位置都是相当于视口的左上角
@@ -301,9 +304,9 @@ dom.getBoundingClientRect().width/height/top/left/bottom/right
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7/">
+                      <a href="/2021/04/15/css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E7%BB%A7%E6%89%BF/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">css选择器优先级</span>
+                        <span class="hidden-mobile">css选择器优先级和样式继承</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
