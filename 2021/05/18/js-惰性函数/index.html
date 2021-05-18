@@ -18,9 +18,25 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>Tags - TAPTAQ WORLD</title>
+  <title>js-惰性函数 - TAPTAQ WORLD</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -146,14 +162,51 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/yuhangyuan4.jpg') no-repeat center center;
+         style="background: url('/img/yekong.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Tag">
+            <span class="h2" id="subtitle" title="js-惰性函数">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-18 22:04" pubdate>
+        May 18, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      390 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -170,24 +223,106 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/JS/" style="font-size: 18.75px; color: #99abe0">JS</a> <a href="/tags/advance/" style="font-size: 15px; color: #bbe">advance</a> <a href="/tags/browser/" style="font-size: 15px; color: #bbe">browser</a> <a href="/tags/css/" style="font-size: 26.25px; color: #558ac5">css</a> <a href="/tags/data-structure/" style="font-size: 18.75px; color: #99abe0">data structure</a> <a href="/tags/data-structure/" style="font-size: 22.5px; color: #779bd3">data-structure</a> <a href="/tags/html/" style="font-size: 15px; color: #bbe">html</a> <a href="/tags/interview/" style="font-size: 30px; color: #337ab7">interview</a> <a href="/tags/mobile/" style="font-size: 15px; color: #bbe">mobile</a>
-</div>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">js-惰性函数</h1>
+            
+            <div class="markdown-body">
+              <h2 id="关于惰性函数"><a href="#关于惰性函数" class="headerlink" title="关于惰性函数"></a>关于惰性函数</h2><pre><code>如字面意思，惰性函数是真的惰吗？
+我觉得不是，我觉得与其说它是惰，还不如说它是聪明的，它不会去重复地去做某一样东西，而形成冗余。而这也恰好是它的作用，好处！！！
 
-              </div>
+而惰性函数的优点：就是能避免多次重复的步骤判断，冗余等，只需一次判定，即可直接去使用，不用做无用的重复步骤
+
+惰性函数的应用场景：常用于函数库的编写，单例模式之中。在固定的应用环境不会发生改变，频繁要使用同一判断逻辑的
+</code></pre>
+<h2 id="惰性函数的例子"><a href="#惰性函数的例子" class="headerlink" title="惰性函数的例子"></a>惰性函数的例子</h2><pre><code>以浏览器的监听事件方法为例：
+addEventlistener的这种方法是不支持IE浏览器的
+而IE浏览器是使用attachEvent这个方法
+
+当我们想要做到兼容性的时候，肯定要先判断这个浏览器是否适用此方法
+正常的写法：
+</code></pre>
+<p><img src="/2021/05/18/js-%E6%83%B0%E6%80%A7%E5%87%BD%E6%95%B0/1.PNG" srcset="/img/loading.gif" lazyload></p>
+<pre><code>我们经常会用这种写法来写，但其实我们每次都要进行判断，重复着之前重复的东西，就导致性能不太好了
+
+而我们使用惰性函数这个思想来写的话，就会避免这种重复判断，即一次判断，多次直接使用
+惰性函数思想的写法：
+</code></pre>
+<p><img src="/2021/05/18/js-%E6%83%B0%E6%80%A7%E5%87%BD%E6%95%B0/2.PNG" srcset="/img/loading.gif" lazyload></p>
+<pre><code>这样写的话，就相当于第一次判断了，就告诉它，接下来就是这个了，不用再去判断了，直接就用这个方法就好了
+</code></pre>
+
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/JS/">JS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/advance/">advance</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/03/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80JS/">
+                        <span class="hidden-mobile">关于一些基础JS</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -268,9 +403,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
